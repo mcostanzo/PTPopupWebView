@@ -517,7 +517,7 @@ open class PTPopupWebView : UIView {
     /// regular expression match
     fileprivate func isMatch(_ string: String, pattern: String) -> Bool {
         let regex = try! NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options.caseInsensitive)
-        let matches = regex.matches(in: string, options: [], range:NSMakeRange(0, string.characters.count))
+        let matches = regex.matches(in: string, options: [], range:NSMakeRange(0, string.count))
         return matches.count > 0
     }
     
