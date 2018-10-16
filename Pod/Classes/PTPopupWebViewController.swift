@@ -69,7 +69,7 @@ open class PTPopupWebViewController : UIViewController {
         switch backgroundStyle {
         case .blurEffect(let blurStyle):
             let nib = UINib(nibName: "PTPopupWebViewControllerBlur", bundle: bundle)
-            view = nib.instantiate(withOwner: self, options: nil).first as! UIView
+            view = nib.instantiate(withOwner: self, options: nil).first as? UIView
             blurView.effect = UIBlurEffect(style: blurStyle)
             
         case .opacity(let color):
